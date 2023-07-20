@@ -1,0 +1,32 @@
+const NFTs = [];
+
+function mintNFT ( _name, _type, _rarity, _habitat) {
+    const NFT = {
+        'name': _name,
+        'type': _type,
+        'rarity': _rarity,
+        'habitat': _habitat
+    }
+    NFTs.push(NFT)
+    console.log('NFT Minted\t' + _name)
+}
+
+function listNFTs () {
+    for(let i=0;i<NFTs.length;i++){
+        console.log('\nPOKEMON NO.: \t' + (i + 1))
+        console.log('NAME: \t\t' + NFTs[i].name)
+        console.log('POKEMON TYPE: \t' + NFTs[i].type)
+        console.log('RARITY: \t' + NFTs[i].rarity)
+        console.log('HABITAT: \t' + NFTs[i].habitat)
+    }
+}
+
+function getTotalSupply() {
+    console.log('\nTOTAL NO. OF NFTs: \t' + NFTs.length)
+}
+
+mintNFT('Charizard', 'Fire', 'Rare', 'Mountains/Volcanoes');
+mintNFT('Bulbasaur', 'Grass', 'Rare', 'Grassy Area');
+mintNFT('Pikachu', 'Electric', 'Rare', 'Forest and Woodlands');
+listNFTs();
+getTotalSupply();
